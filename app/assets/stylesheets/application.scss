@@ -1,0 +1,201 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+@import "bootstrap/scss/bootstrap";
+
+@import url(https://fonts.googleapis.com/css?family=Sacramento|Ruluko|Merriweather:400italic,700italic,400,700);
+
+$Merriweather: 'Merriweather', serif;
+$Sacramento: 'Sacramento', cursive;
+
+
+body, html {
+    height: 100%;
+    background-color: #EAE7DC;
+    font-family: $Merriweather;
+    line-height: 3;
+}
+
+hr {
+    border-style: dotted none none none;
+    height:30px;
+    border-width: 5px;
+    width: 5%;
+    border-color: #d8c3a5;
+}
+
+.icons img {
+    max-width: 40px;
+    height: auto;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.navbar {
+    z-index: 1;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    background-color: #d8c3a5;
+}
+
+.nav-item {
+    margin: 0 5%;
+}
+.navbar-brand {
+    padding-left: 4%;
+}
+.greeting-img {
+    height: 100%;
+    width: 100%;
+    display: center;
+    /* top: 0; */
+    z-index: -100;
+    /* margin: 0 0 10px 0; */
+    background-size: cover;
+    background-image: url("Greeting-picture.jpg");
+    background-color: #EAE7DC;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.greeting-text {
+    width: 50%;
+    text-align: center;
+    position: absolute;
+    top: 150px;
+    left: 25%;
+    right: 25%;
+    color: white;
+    font-family: $Sacramento;
+}
+.greeting-text h1 {
+    font-size: 400%;
+    opacity: 1;
+    transition: opacity linear 1s;
+}
+@media screen and (max-width: 800px) {
+    .greeting-text h1 {
+        font-size: 250%;
+    }
+}
+@media screen and (max-height: 500px) {
+    .greeting-text h1 {
+        opacity: 0;
+    }
+}
+
+.self-intro {
+    text-align: center;
+}
+.self-intro h3 {
+    
+    padding-top: 5% !important;
+}
+.middle-container {
+    padding: 70px 5% 20px 5%;
+}
+.middle-container a:link {
+    color: rgb(65, 63, 63);
+    text-decoration: underline;
+}
+.middle-container a:hover {
+    color: rgba(212, 175, 55, 0.849);
+}
+.middle-container a:visited {
+    color: #8e8d8a;
+    text-decoration: none;
+}
+.middle-container h3 {
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    color: #8e8d8a;
+}
+.middle-container h5 {
+    padding-top: 2%;
+    padding-bottom: 1%;
+}
+.self-intro p {
+    padding: 0 10% 4% 10%;
+}
+.timeline {
+    margin: 10%;
+    margin-top: 10px;
+}
+.timeline img {
+    max-width: 80%;
+    display: block;
+}
+@media screen and (max-width: 576px) {
+    .row.timeline.reverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+.bottom-container {
+    position: relative;
+    margin: 10px auto 2px auto !important;
+    font-size: 10px;
+    text-align: center;
+}
+
+/* gallery */
+.row.gallery {
+    align-items: flex-start;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.gallery-box {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: rgb(109, 107, 107);
+    font-size: 80%;
+    font-family: $Merriweather;
+    text-align: center;
+}
+.gallery img {
+    position: relative; 
+    width: 100%;
+}
+.my-gallery {
+    text-align: center;
+    padding-top: 80px;
+    font-size: 200%;
+    color: rgb(109, 107, 107);
+}
+
+
+/* dropdown customization */
+.dropdown-menu {
+    text-align: left;
+    vertical-align: text-bottom;
+    background-color: #d8c3a5;
+}
+.dropdown-item:hover {
+    color: white;
+    background-color: rgba(212, 175, 55, 0.5);
+}
+.icons.dropdown-menu img {
+    padding-left: 0;
+}
+a.dropdown-item.active {
+    background-color: rgba(212, 175, 55, 0.849);
+}

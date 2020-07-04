@@ -1,0 +1,48 @@
+<body>
+    <!-- Nav Bar -->
+    <div id="nav-placeholder">
+        
+    </div>
+
+    <script>
+    $(function(){
+        $("#nav-placeholder").load("nav.html", function() {
+            $("#hobbies").addClass("active");
+            $("#traveling").addClass("active");
+        });
+    });
+    </script>
+
+    <div class="middle-container">
+    <h3>Traveling</h3>
+    <h5>Places where I solo-travelled</h5>
+    <ul>
+      <li> 
+        Taiwan<br>
+        I spent 15 days there visitng Taipei, Taichung, Kaohsiung, Sun Moon Lake. As a hardcore milk tea fan, I drank a total of 25+ cups of milk tea of different brands/ restaurants during my stay in Taiwan. 
+        The best milk tea I found is from Kaohsiung --  Huada milk tea. That is the only milk tea I willingly spent 40 minutes on road for it and even visited it again the next day. 
+        <br>
+        Interesting experience: asking shop owners to help me take pictures, met a mother and a daughter from Hong Kong and travelled together, met up Taiwan friends who are also Duke students.
+        </li>
+        <div class="row gallery">
+          <div class="col-lg-3 col-md-4 col-sm-6 gallery-box">
+              <%= image_tag("traveling/milk_tea.PNG", :alt => "Milk Tea", :class => "img-fluid") %>
+          </div>
+					<div class="col-lg-3 col-md-4 col-sm-6 gallery-box">
+						<%= image_tag("traveling/taiwan-me.JPG", :alt => "Visit to Rainbow Village", :class => "img-fluid") %>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 gallery-box">
+						<%= image_tag("traveling/street_food.PNG", :alt => "Taiwan street food", :class => "img-fluid") %>
+					</div>
+        </div>
+      <li>
+        Beijing<br>
+        I spent around 15 days in Beijing even though it is not my first time visit. I visted some of my friends attending colleges there.
+      </li>
+        
+
+    </ul>
+
+    </div>
+    
+</body>

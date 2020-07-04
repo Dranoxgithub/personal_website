@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anni Chen's personal webiste</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Anni Chen</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto ml-auto">
+            <li class="nav-item">
+              <%= link_to "Home", "index", class:"nav-link", id:"home" %>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://drive.google.com/file/d/1mZvFaALc6OPmXUVFTcaIfFKSe6326RXc/view?usp=sharing">Resume</a>
+            </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link" href="projects.html">Projects</a>
+            </li> -->
+            
+            
+            <li class="nav-item dropdown">
+                <a id="hobbies" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Hobbies
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <%= link_to "Learning", "learning", class:"dropdown-item", id:"learning" %>
+                <%= link_to "Traveling", "traveling", class:"dropdown-item", id:"traveling" %>
+                <%= link_to "Photography", "gallery", class:"dropdown-item", id:"photography" %>
+                </div>
+            </li> 
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Contact
+                </a>
+                <div class="icons dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="https://www.linkedin.com/in/anni-chen-02/"><%= image_tag("icons/linkedin.png", :alt => "linkedin-icon") %>LinkedIn</a>
+                    <a class="dropdown-item" href="https://github.com/Dranoxgithub"><%= image_tag("icons/github.png", :alt => "github-icon") %>Github</a>
+                    <a class="dropdown-item" href="mailto:anni.chen@duke.edu"><%= image_tag("icons/email.png", :alt => "email-icon") %>Email</a>
+                </div>
+            </li>   
+            </ul>
+        </div>
+      </nav>
+    <%= yield %>
+    <div class="bottom-container">
+      <p>© Handcoded by Anni Chen, 2020.</p>
+    </div>
+  </body>
+</html>
+
+
