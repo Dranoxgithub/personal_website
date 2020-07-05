@@ -10,6 +10,17 @@
   </head>
 
   <body>
+      <% if flash[:notice] %>
+        <div class="alert alert-success" role="alert">
+          <p class="notice"><%= notice %></p>
+        </div>
+      <% end %>
+      <% if flash[:alert] %>
+        <div class="alert alert-danger">
+          <p class="alert"><%= alert %></p>
+        </div> 
+      <% end %>
+
       <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#">Anni Chen</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,6 +31,9 @@
             <ul class="navbar-nav mr-auto ml-auto">
             <li class="nav-item">
               <%= link_to "Home", "index", class:"nav-link", id:"home" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Blog", "blogs", class:"nav-link", id:"blog" %>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="https://drive.google.com/file/d/1mZvFaALc6OPmXUVFTcaIfFKSe6326RXc/view?usp=sharing">Resume</a>

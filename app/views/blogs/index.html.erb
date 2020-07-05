@@ -4,27 +4,28 @@
   <p id="notice"><%= notice %></p>
 
   <h1>Blogs</h1>
+  <section class="section">
+    <div class="container">
+        <% @blogs.each do |blog| %>
+            <div class="card">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media=-ontent">
+                            <p class="title is-4"><%= link_to blog.title, blog%></p>
 
-  <table>
-    <thead>
-      <tr>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
+                        </div>
+                    </div>
 
-    <tbody>
-      <% @blogs.each do |blog| %>
-        <tr>
-          <td><%= link_to 'Show', blog %></td>
-          <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-          <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+                    <div class="content">
+                        <%= blog.content %>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</section>
 
-  <br>
 
-  <%= link_to 'New Blog', new_blog_path %>
-</div>
+  
+
 </body>
