@@ -1,24 +1,29 @@
 
 <body>
-<div class="middle-container">
-  <p id="notice"><%= notice %></p>
 
-  <h1>Blogs</h1>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Blog</h1>
+    <p class="lead">on products/ tech/ women in tech. </p>
+  </div>
+</div>
+
+
+<div class="blog">
   <section class="section">
     <div class="container">
         <% @blogs.each do |blog| %>
-            <div class="card">
-                <div class="card-content">
-                    <div class="media">
-                        <div class="media=-ontent">
-                            <p class="title is-4"><%= link_to blog.title, blog%></p>
+            <div class="col-lg-8 col-md-10 mx-auto card">
+                <div class="entry card-body">
+                    <div class="post-preview">
+                        <h2 class="post-title"><%= link_to blog.title, blog%></h2>
 
-                        </div>
                     </div>
 
-                    <div class="content">
+                    <h3 class="post-subtitle">
                         <%= blog.content %>
-                    </div>
+                    </h3>
+                    <p class="post-meta">Posted on <%= blog.created_at.strftime("%b %d, %Y") %></p>
                 </div>
             </div>
         <% end %>
@@ -26,6 +31,6 @@
 </section>
 
 
-  
+</div>
 
 </body>

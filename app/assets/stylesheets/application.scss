@@ -14,10 +14,11 @@
  *= require_self
  */
 
-
+ 
 @import "bootstrap/scss/bootstrap";
 
-@import url(https://fonts.googleapis.com/css?family=Sacramento|Merriweather:400italic,700italic,400,700);
+@import url("https://fonts.googleapis.com/css?family=Sacramento|Merriweather");
+
 
 
 $Merriweather: 'Merriweather', serif;
@@ -26,8 +27,6 @@ $Sacramento: 'Sacramento', cursive;
 
 body, html {
     height: 100%;
-    background-color: #EAE7DC;
-    font-family: $Merriweather;
     line-height: 3;
 }
 
@@ -47,6 +46,7 @@ hr {
     padding-right: 20px;
 }
 .navbar {
+    font-family: $Merriweather;
     z-index: 1;
     padding-top: 0;
     padding-bottom: 0;
@@ -121,7 +121,19 @@ hr {
     
     padding-top: 5% !important;
 }
+.blog {
+    padding: 30px 5% 20px 5%;
+}
+.jumbotron {
+    padding-top: 80px;
+    min-height: 200px;
+    height: 40%;
+}
+.jumbotron h1{
+    padding-top: 2%;
+}
 .middle-container {
+    font-family: $Merriweather;
     padding: 80px 5% 20px 5%;
 }
 .middle-container a:link {

@@ -23,7 +23,7 @@
       <nav class="navbar navbar-expand-lg navbar-light">
 
         
-        <a class="navbar-brand" href="#">Anni Chen</a>
+        <a class="navbar-brand" href="index">Anni Chen</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -31,17 +31,15 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto ml-auto">
             <li class="nav-item">
-              <%= link_to "Home", "index", class:"nav-link", id:"home" %>
+              <a class="nav-link" id="home" href="index">Home</a>
             </li>
             <li class="nav-item">
-              <%= link_to "Blog", "blogs", class:"nav-link", id:"blog" %>
+              <a class="nav-link" id="blog" href="blogs">Blog</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="https://drive.google.com/file/d/1mZvFaALc6OPmXUVFTcaIfFKSe6326RXc/view?usp=sharing">Resume</a>
             </li>
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="projects.html">Projects</a>
-            </li> -->
+            
             
             
             <li class="nav-item dropdown">
@@ -49,9 +47,9 @@
                 Hobbies
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <%= link_to "Learning", "learning", class:"dropdown-item", id:"learning" %>
-                <%= link_to "Traveling", "traveling", class:"dropdown-item", id:"traveling" %>
-                <%= link_to "Photography", "gallery", class:"dropdown-item", id:"photography" %>
+                  <a class="dropdown-item" id="learning" href="learning">Learning</a>
+                  <a class="dropdown-item" id="traveling" href="traveling">Traveling</a>
+                  <a class="dropdown-item" id="photography" href="photography">Photography</a>
                 </div>
             </li> 
             <li class="nav-item dropdown">

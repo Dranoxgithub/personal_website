@@ -55,11 +55,15 @@ class BlogsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_blog
-      @blog = Blog.find(params[:id])
+      if params[:id].to_i.to_s == params[:id]
+        @blog = Blog.find(params[:id])
+      else
+        redirect_to controller: 'pages', action: 'show', page: params[:id]
+      end
     end
 
     # Only allow a list of trusted parameters through.
     def blog_params
-      params.require(:blog).permit(:title, :content)
+      params.require(:blog).permit(:title, :content, :body)
     end
 end

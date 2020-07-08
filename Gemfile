@@ -34,6 +34,9 @@ gem 'simple_form', '~> 5.0', '>= 5.0.2'
 
 gem 'jquery-rails'
 
+gem 'mini_magick', '~> 4.10', '>= 4.10.1'
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
