@@ -35,7 +35,8 @@ gem 'simple_form', '~> 5.0', '>= 5.0.2'
 gem 'jquery-rails'
 
 gem 'mini_magick', '~> 4.10', '>= 4.10.1'
-
+# Sprockets is a Rack-based asset packaging system that concatenates and serves JavaScript, CoffeeScript, CSS, Sass, and SCSS.
+gem 'sprockets', '~> 4.0', '>= 4.0.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

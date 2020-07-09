@@ -1,3 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Sacramento|Merriweather");
+
+
+
+$Merriweather: 'Merriweather', serif;
+$Sacramento: 'Sacramento', cursive;
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -9,21 +17,17 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
+ * 
+ *= depend_on blogs.sass
+
  *= require_tree .
  *= require_self
  */
 
+
  
 @import "bootstrap/scss/bootstrap";
-
-@import url("https://fonts.googleapis.com/css?family=Sacramento|Merriweather");
-
-
-
-$Merriweather: 'Merriweather', serif;
-$Sacramento: 'Sacramento', cursive;
-
+@import "blogs.scss";
 
 body, html {
     height: 100%;
@@ -108,7 +112,7 @@ hr {
         font-size: 250%;
     }
 }
-@media screen and (max-height: 500px) {
+@media screen and (max-device-width: 736px) {
     .greeting-text h1 {
         opacity: 0;
     }
@@ -124,17 +128,9 @@ hr {
 .blog {
     padding: 30px 5% 20px 5%;
 }
-.jumbotron {
-    padding-top: 80px;
-    min-height: 200px;
-    height: 40%;
-}
-.jumbotron h1{
-    padding-top: 2%;
-}
 .middle-container {
     font-family: $Merriweather;
-    padding: 80px 5% 20px 5%;
+    padding: 40px 5% 20px 5%;
 }
 .middle-container a:link {
     color: rgb(65, 63, 63);
@@ -163,6 +159,10 @@ hr {
     padding-top: 2%;
     padding-bottom: 1%;
 }
+.hobby {
+    padding: 80px 5% 20px 5%;
+}
+
 .self-intro p {
     padding: 0 10% 4% 10%;
 }
@@ -234,3 +234,10 @@ a.dropdown-item.active {
 .alert {
     margin-bottom: 0;
 }
+
+
+
+
+
+
+

@@ -5,36 +5,13 @@
 
 
 
-/*!
- * Start Bootstrap - Clean Blog v5.0.9 (https://startbootstrap.com/themes/clean-blog)
- * Copyright 2013-2020 Start Bootstrap
- * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/LICENSE)
- */
-
-body {
-  font-size: 20px;
-  color: #212529;
-  font-family: 'Lora', 'Times New Roman', serif;
-}
-
 p {
   line-height: 1.5;
   margin: 30px 0;
 }
 
-p a {
-  text-decoration: underline;
-}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 800;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
+
 
 .blog a {
   color: #212529;
@@ -43,11 +20,15 @@ h6 {
 
 .blog a:focus, a:hover {
   color: #d8c3a5;
+  text-decoration: none;
 }
 .jumbotron {
-  background-image: url("IMG_6423.JPG");
-	background-size: cover;
-	color: white;
+  background-image: image-url("IMG_6423.JPG");
+  background-size: cover;
+  color: white;
+}
+.display-4 {
+  padding-top: 50px;
 }
 
 
@@ -56,6 +37,7 @@ h6 {
   font-size: 30px;
   margin-top: 30px;
   margin-bottom: 10px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
 }
 
 .post-subtitle {
@@ -72,4 +54,33 @@ h6 {
 }
 
 
+.blog-show {
+  padding: 80px 5% 20px 5%;
+}
+.blog-show h5 {
+  font-family: Lora,'Times New Roman',serif;
+  font-size: 20px;
+  line-height: 1.5;
+}
 
+.blog-show strong {
+  font-size: 40px;
+  font-weight:200;
+}
+
+
+
+@media screen and (max-device-width: 736px) {
+  .entry h2 {
+      font-size: 150%;
+  }
+  .entry h3 {
+    font-size: 100%;
+  }
+  .entry p {
+    font-size: 12px;
+  }
+  .card-body {
+    padding: 0.75rem;
+  }
+}
