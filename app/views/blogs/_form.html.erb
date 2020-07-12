@@ -20,6 +20,15 @@
       <%= form.rich_text_area :body, input_html: { class: "form-control"}%>
     </div>
   </div>
+  <div class="form-group">
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  </div>
+  <% end %>
+  
+
+  
   
 
   <% if blog.errors.any? %>
@@ -34,8 +43,6 @@
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+  
+
 </div>
