@@ -76,6 +76,42 @@ p {
 .trix-content {
   overflow-wrap: break-word;
 }
+// pagination
+.pagination {
+  line-height: 1;
+  background: #f1f1f1;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  padding: 1em;
+  cursor: default; 
+}
+.pagination a, .pagination span {
+  padding: 0.2em 0.3em; 
+}
+  
+.pagination .disabled {
+  color: #aaaaaa; 
+}
+.pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  background-color: #d8c3a5;
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  line-height: 1.4;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+}
+.pagination a {
+  text-decoration: none;
+  color: black; 
+}
+.pagination a:hover, .pagination a:focus {
+    text-decoration: underline; 
+}
+
 
 @media screen and (max-device-width: 736px) {
   .entry h2 {

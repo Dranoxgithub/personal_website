@@ -28,11 +28,12 @@ gem 'image_processing', '~> 1.2'
 
 # for amazon s3
 gem "aws-sdk-s3", require: false
-
+gem 'fog-aws', '~> 3.6', '>= 3.6.6'
 # for .env
 gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
 
-gem 'fog-aws', '~> 3.6', '>= 3.6.6'
+# to paginate blog
+gem 'will_paginate', '~> 3.3'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

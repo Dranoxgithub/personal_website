@@ -3,7 +3,7 @@ class BlogsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   # GET /blogs
   def index
-    @blogs = Blog.all.order("created_at DESC")
+    @blogs = Blog.paginate(page: params[:page], per_page:10).all.order("created_at DESC")
   end
 
   # GET /blogs/1
@@ -22,7 +22,6 @@ class BlogsController < ApplicationController
   # POST /blogs
   def create
     @blog = Blog.new(blog_params)
-
     respond_to do |format|
       if @blog.save
         format.html { redirect_to @blog, notice: 'Blog was successfully created.' }
@@ -67,3 +66,5 @@ class BlogsController < ApplicationController
       params.require(:blog).permit(:title, :content, :body)
     end
 end
+
+
