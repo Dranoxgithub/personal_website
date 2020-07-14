@@ -72,7 +72,9 @@ p {
   font-weight:200;
 }
 
-
+.trix-content {
+  overflow-wrap: break-word;
+}
 
 @media screen and (max-device-width: 736px) {
   .entry h2 {
