@@ -8,7 +8,6 @@ class BlogsController < ApplicationController
 
   # GET /blogs/1
   def show
-    @count = Blog.all.count
   end
 
   # GET /blogs/new
