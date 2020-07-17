@@ -8,6 +8,7 @@ class BlogsController < ApplicationController
 
   # GET /blogs/1
   def show
+    @count = Blog.all.count
   end
 
   # GET /blogs/new
@@ -50,6 +51,8 @@ class BlogsController < ApplicationController
       format.html { redirect_to blogs_url, notice: 'Blog was successfully destroyed.' }
     end
   end
+  
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.
