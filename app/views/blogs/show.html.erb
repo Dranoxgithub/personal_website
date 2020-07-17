@@ -22,18 +22,18 @@
                 <h1 id="blog-title"><%= @blog.title %></h1>
             </div>
             <div>
-                <h5><%= @count %></h5>
+                <h5><%= @blog.body %></h5>
             </div>
             <div class="container">
                 <div class="row">
                   <div class="col text-center">
                     <div class="btn-group">
-                        <% if @blog.id < @count %>
-                            <%= link_to "Previous", blogs_path+"/#{@blog.id + 1}", class: "btn" %>
-                        <% end %> 
-                        <% if @blog.id > 1 %>
-                            <%= link_to "Next", blogs_path+"/#{@blog.id - 1}", class: "btn" %>
-                        <% end %> 
+                        <% if @blog.previous_post != nil %> 
+                            <%= link_to "< Previous", @blog.previous_post, class: "btn" %>
+                        <% end %>
+                        <% if @blog.next_post != nil %> 
+                            <%= link_to "Next >", @blog.next_post, class: "btn" %>
+                        <% end %>
                         </div>
                   </div>
                 </div>
